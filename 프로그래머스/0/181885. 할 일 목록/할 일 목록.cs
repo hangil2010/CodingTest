@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+
+public class Solution {
+    public string[] solution(string[] todo_list, bool[] finished) {
+        List<string> result = new List<string>();
+        List<int> falseIndex = new List<int>();
+        
+        for(int i = 0 ; i < finished.Length ; i++)
+        {
+            if(!finished[i])
+            {
+                falseIndex.Add(i);
+            }
+        }
+    
+        for(int i = 0 ; i < falseIndex.Count ; i++)
+        {
+            result.Add(todo_list[falseIndex[i]]);
+        }
+        
+        return result.ToArray();
+    }
+}
