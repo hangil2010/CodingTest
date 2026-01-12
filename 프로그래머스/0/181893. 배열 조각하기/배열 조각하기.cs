@@ -4,7 +4,6 @@ using System.Collections.Generic;
 public class Solution {
     public int[] solution(int[] arr, int[] query) {
         List<int> arrList = arr.ToList();
-        List<int> tempList = new List<int>();
         
         for(int i = 0 ; i < query.Length ; i++)
         {
